@@ -3,8 +3,21 @@ programa
     funcao inicio()
     {
         cadeia nome, posicao, titular, lesao
-        inteiro idade = 0, numero = 0
-        real altura = 0
+        inteiro idade, numero
+        real altura
+
+        // Cadastro do jogador
+        escreva("Nome do jogador: ")
+        leia(nome)
+
+        escreva("Idade: ")
+        leia(idade)
+
+        escreva("Altura (em metros): ")
+        leia(altura)
+
+        escreva("Posição: ")
+        leia(posicao)
 
         escreva("Número da camisa: ")
         leia(numero)
@@ -32,7 +45,14 @@ programa
         }
         senao
         {
-            escreva("O jogador não está lesionado e PODE jogar.\n")
+            se (titular == "sim")
+            {
+                escreva("O jogador é TITULAR e PODE jogar.\n")
+            }
+            senao
+            {
+                escreva("O jogador é RESERVA e PODE jogar.\n")
+            }
         }
 
         escreva("\n===== LISTA DE TITULARES =====\n")
